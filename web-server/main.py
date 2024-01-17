@@ -14,9 +14,11 @@ def get_list():
         <h1>Hola soy una pagina</h1>
         <p>soy un parrafo</p>
     """
-
+    
+@app.get('/categories')
 def run():
-    store.get_categories()
+    categories = store.get_categories()
+    return categories
 
 if __name__ == '__main__':
     run()
